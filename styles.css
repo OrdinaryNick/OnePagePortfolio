@@ -144,6 +144,53 @@ ABOUT
 }
 
 /* --------------------------------
+GALLERY
+-------------------------------- */
+#gallery {
+    background-color: white;
+}
+
+#gallery ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery .grid li {
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    background-clip: content-box;
+    background-size: cover;
+    background-color: #333;
+    background-position: center;
+}
+
+#gallery .grid li.small {
+    flex-basis: 40%;
+}
+
+#gallery .grid li.large {
+    flex-basis: 60%;
+}
+
+#gallery p {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+@media (max-width: 1000px) {
+
+    #gallery .grid li.small, #gallery .grid li.small {
+        flex-basis: 100%;
+    }
+}
+
+/* --------------------------------
 FOOTER
 -------------------------------- */
 footer {
