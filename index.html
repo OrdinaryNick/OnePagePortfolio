@@ -9,11 +9,27 @@
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
             integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    </style>
 </head>
 <body id="top">
+<header>
+    <nav>
+<!--        <h2><a href="#" target="_blank"><img src="img/logo.jpg" alt=""></a></h2>-->
+        <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#getting-around">Travels</a></li>
+            <li><a href="#famous-quotes">Quotes</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#social-media">Links</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- ******************************************************** -->
 <div id="hero">
     <div class="background-image"></div>
     <h1>Beautiful Space Photo portfolio</h1>
@@ -114,7 +130,7 @@
     </iframe>
 </div>
 <!-- ******************************************************** -->
-<footer>
+<footer id="social-media">
     <ul>
         <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
         <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
@@ -127,5 +143,21 @@
     </p>
     <p>&ldquo;Space is the breath of art.&ldquor; &mdash;Frank Lloyd Wright</p>
 </footer>
+<script>
+    $(document).ready(function () {
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+
+            const target = this.hash;
+            const $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 75
+            }, 900, 'swing', function () {
+                window.location.hash = target - 75;
+            })
+        })
+    });
+</script>
 </body>
 </html>
