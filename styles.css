@@ -251,6 +251,71 @@ TRAVELLING
 }
 
 /* --------------------------------
+QUOTES
+-------------------------------- */
+#famous-quotes {
+    background-color: #fafafa;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#famous-quotes .portrait-photo {
+    border-radius: 50%;
+    border: 4px solid #2196f3;
+    margin-bottom: 10px;
+}
+
+#famous-quotes .portrait-photo:first-child {
+    margin-top: 20px;
+}
+
+#famous-quotes .quote {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+#famous-quotes .author {
+    margin: 20px auto;
+}
+
+#famous-quotes .author:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    #famous-quotes .quote {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    #famous-quotes .author {
+        font-size: 14px;
+    }
+}
+
+/* --------------------------------
+CONTACT
+-------------------------------- */
+section.flexbox-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.flexbox-section p {
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+
+/* --------------------------------
 FOOTER
 -------------------------------- */
 footer {
